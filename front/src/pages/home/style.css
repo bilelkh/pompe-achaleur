@@ -1,0 +1,669 @@
+html,
+body {
+  height: 100%;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  overflow-x: hidden;
+  background-color: #f8f8f8 !important;
+  -webkit-font-smoothing: antialiased;
+}
+a:focus,
+.btn:focus {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+@media only screen and (min-width: 1430px) {
+  .container {
+    max-width: 1400px;
+  }
+}
+.main {
+  overflow: hidden;
+}
+.header {
+  background: url(./header.svg) no-repeat left bottom;
+  width: 100%;
+  position: relative;
+  padding: 100px 0;
+  background-size: 102%;
+  min-height: 100vh;
+}
+.header:before {
+  content: "";
+  height: 80%;
+  top: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  background: #e4f2fc;
+}
+.header:after {
+  content: "";
+  background: url("../../images/groupe-left.svg") no-repeat;
+  top: 50px;
+  right: -310px;
+  z-index: 0;
+  position: absolute;
+  width: 450px;
+  height: 260px;
+  background-size: 100%;
+}
+@media only screen and (max-width: 767px) {
+  .header:after {
+    top: -10px;
+    right: -190px;
+    width: 250px;
+    height: 260px;
+  }
+}
+.slder-left {
+  padding: 0 15px;
+}
+.slder-right {
+  padding-top: 45px;
+  position: relative;
+}
+.slder-right:before {
+  content: "";
+  background: url("../../images/grille-repetition1.svg") no-repeat;
+  top: -20px;
+  left: -55px;
+  z-index: 0;
+  position: absolute;
+  width: 163px;
+  height: 171px;
+  background-size: 100%;
+}
+.slder-right:after {
+  content: "";
+  background: url("../../images/grille-repetition2.svg") no-repeat;
+  bottom: -75px;
+  right: -50px;
+  z-index: 0;
+  position: absolute;
+  width: 163px;
+  height: 171px;
+}
+.header-left-trace {
+  position: absolute;
+  height: 700px;
+  left: -18px;
+  z-index: 0;
+  background: url(../../images/trace-2.svg) no-repeat;
+}
+
+.body-left-trace {
+  position: absolute;
+  height: 700px;
+  z-index: 0;
+  background: url(../../images/right-trace.svg) no-repeat;
+}
+
+.text-box {
+  text-align: left;
+  position: relative;
+  z-index: 999999;
+}
+.text-box .subtitle {
+  font-size: 29px;
+  line-height: 38px;
+  z-index: 100;
+  letter-spacing: 0px;
+  color: #0f60da;
+  opacity: 1;
+  text-transform: uppercase;
+  font-weight: bold;
+  position: relative;
+  display: inline-block;
+  padding: 0 55px 0 0;
+  margin: 0 0 15px;
+}
+.text-box .subtitle:after {
+  content: " ";
+  position: absolute;
+  width: 45px;
+  height: 5px;
+  border-radius: 5px;
+  top: 50%;
+  right: 0;
+  background: #0f60da;
+  transform: translateY(-50%);
+}
+.text-box h1 {
+  letter-spacing: 0px;
+  color: #04014e;
+  font-weight: 900;
+  font-size: 85px;
+  line-height: 95px;
+  z-index: 100;
+  letter-spacing: 0px;
+  opacity: 1;
+}
+.text-box h3 {
+  letter-spacing: 0px;
+  color: #04014e;
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 85px;
+  z-index: 100;
+  letter-spacing: 0px;
+  opacity: 1;
+}
+
+.text-box p {
+  font-size: 56px;
+  line-height: 74px;
+  font-weight: bold;
+  color: #0f60da;
+  margin: 0 0 35px;
+}
+.header-card {
+  background-color: #0f60da;
+  height: 130px;
+  border-radius: 50px 50px 0 0;
+  position: absolute;
+  width: 100%;
+  top: -85px;
+  font-family: "SF Pro Display", sans-serif !important;
+  z-index: 1;
+}
+
+@media only screen and (max-width: 1550px) {
+  .text-box h1 {
+    font-size: 75px;
+    line-height: 85px;
+  }
+  .text-box h3 {
+    font-size: 50px;
+    line-height: 75px;
+  }
+
+  .text-box p {
+    font-size: 40px;
+    line-height: 65px;
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  .text-box h1 {
+    font-size: 65px;
+    line-height: 75px;
+  }
+  .text-box h3 {
+    font-size: 40px;
+    line-height: 55px;
+  }
+
+  .text-box p {
+    font-size: 36px;
+    line-height: 44px;
+    margin-bottom: 10px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .text-box h1 {
+    font-size: 55px;
+    line-height: 65px;
+  }
+  .text-box h3 {
+    font-size: 30px;
+    line-height: 45px;
+  }
+
+  .text-box p {
+    font-size: 26px;
+    line-height: 34px;
+  }
+
+  .text-box .subtitle {
+    padding: 0 0 15px;
+  }
+  .text-box .subtitle:after {
+    bottom: 0;
+    right: 50%;
+    background: #0f60da;
+    transform: translateX(50%);
+    top: inherit;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .text-box h1 {
+    font-size: 35px;
+    line-height: 55px;
+  }
+  .text-box h3 {
+    font-size: 25px;
+    line-height: 30px;
+  }
+
+  .text-box p {
+    font-size: 25px;
+    line-height: 30px;
+  }
+  .text-box .subtitle {
+    font-size: 25px;
+    line-height: 33px;
+  }
+}
+@media only screen and (max-width: 990px) {
+  .card-form-box {
+    margin-top: 150px;
+  }
+  .text-box {
+    margin-bottom: 60px;
+    text-align: center;
+  }
+  .header-button {
+    text-align: center;
+  }
+}
+
+.form-card {
+  background-color: #fff;
+  position: relative;
+  border-radius: 50px;
+  z-index: 2;
+  box-shadow: 0px 27px 95px #00000029;
+  border: 1px solid #0fda9a38;
+  min-height: 600px;
+  width: 100%;
+}
+.form-check-input {
+  width: 18px !important;
+  height: 18px !important;
+  border: 2px solid #0f60da;
+}
+.header-card-title {
+  text-align: center;
+  font-size: 25px;
+  line-height: 32px;
+  padding: 18px 15px;
+  text-transform: uppercase;
+  color: #fff;
+}
+@media only screen and (max-width: 1400px) {
+  .header-card-title {
+    text-align: center;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+@media only screen and (max-width: 1199px) {
+  .header-card-title {
+    text-align: center;
+    font-size: 16px;
+    line-height: 35px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .header-card-title {
+    font-size: 20px;
+    line-height: 25px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .header-card-title {
+    font-size: 20px;
+    line-height: 25px;
+  }
+}
+.form-card .form-card-body {
+  padding: 0 32px 0 32px;
+  border-radius: 47px;
+  z-index: 99999999999999;
+  background-color: #fff;
+}
+
+.form-text-description {
+  color: rgba(4, 1, 78, 0.52);
+  font-size: 15px;
+  line-height: 32px;
+  font-weight: bold;
+}
+
+.stepper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  margin-right: 5px;
+}
+
+.step {
+  background-color: #0f60da1a;
+  height: 7px;
+  width: 23%;
+  border-radius: 5px;
+}
+
+.active {
+  background-color: #0f60da;
+  border-radius: 5px;
+}
+
+.choice-box {
+  margin-bottom: 25px;
+}
+.label-form {
+  display: block;
+  margin: 0px 0;
+  font-size: 26px;
+  line-height: 35px;
+  color: #04014e;
+}
+.choice {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  border: 2px solid #0f60da;
+  border-radius: 12px;
+  margin: 0 0 15px;
+  padding: 15px 20px;
+  cursor: pointer;
+  font-family: "SF Pro Display", sans-serif !important;
+}
+.choice p {
+  margin-bottom: 0;
+  color: #000;
+  font-size: 20px;
+  line-height: 36px;
+}
+.choice:hover {
+  background-color: #eaeaeb;
+}
+
+.choice-text {
+  font-size: 20px;
+  text-align: center;
+  line-height: 32px;
+  letter-spacing: 0px;
+  color: #000 !important;
+  margin: 0;
+}
+
+.congratulations {
+  padding: 80px 0 25px;
+  text-align: center;
+}
+.congratulations img {
+  max-width: 80px;
+  height: auto;
+}
+.text-resume {
+  color: rgba(4, 1, 78, 0.52);
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: bold;
+}
+.form-input {
+  border: 2px solid #0f60da;
+  text-align: left;
+  letter-spacing: 0px;
+  color: #04014e;
+  opacity: 1;
+  font-size: 20px !important;
+  border-radius: 12px;
+}
+
+.form-input::placeholder {
+  text-align: left !important;
+  letter-spacing: 0px !important;
+  color: #04014e !important;
+  opacity: 0.42 !important;
+  font-size: 20px !important;
+}
+.btn-action {
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 5px;
+}
+.form-button {
+  color: #ffffff !important;
+  background-color: #0f60da !important;
+  padding: 10px 35px;
+  font-size: 29px;
+  border-radius: 75px;
+  min-width: 250px;
+}
+
+.habitatMeilleur {
+  padding: 50px 0;
+}
+.main-title {
+  padding: 0 0 50px;
+  text-align: center;
+}
+.main-title h2 {
+  font-size: 64px;
+  line-height: 85px;
+  font-weight: bold;
+  color: #04014e;
+}
+
+.main-title h3 {
+  font-size: 53px;
+  line-height: 70px;
+  font-weight: bold;
+  color: #0f60da;
+}
+@media only screen and (max-width: 1550px) {
+  .main-title h2 {
+    font-size: 54px;
+    line-height: 75px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .main-title h2 {
+    font-size: 40px;
+    line-height: 55px;
+  }
+
+  .main-title h3 {
+    font-size: 33px;
+    line-height: 40px;
+  }
+}
+@media only screen and (max-width: 760px) {
+  .form-box {
+    margin-bottom: 15px;
+  }
+}
+.header-button {
+  background: #0f60da !important;
+  color: #ffffff !important;
+  font-size: 29px;
+  padding: 12px 30px;
+  border-radius: 75px;
+  transition: all 0.3s ease-in-out;
+}
+
+.header-button:hover {
+  background: #04014e !important;
+  transition: all 0.3s ease-in-out;
+}
+@media only screen and (max-width: 576px) {
+  .header-button {
+    font-size: 25px;
+    padding: 15px 30px;
+    line-height: 28px;
+  }
+}
+.air-conditioner-section {
+  position: relative;
+  text-align: center;
+}
+.air-conditioner-section:after {
+  content: "";
+  background: url("../../images/groupe-left.svg") no-repeat;
+  bottom: 20px;
+  left: -255px;
+  z-index: 0;
+  position: absolute;
+  width: 450px;
+  height: 260px;
+  background-size: 100%;
+}
+.air-conditioner-section img {
+  max-width: 600px;
+  height: auto;
+}
+@media only screen and (max-width: 991px) {
+  .air-conditioner-section img {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .air-conditioner-section:after {
+    left: -225px;
+    width: 350px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .air-conditioner-section:after {
+    left: -182px;
+    width: 250px;
+  }
+}
+.advantage-bottom {
+  padding-top: 60px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+.advantage-card {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 27px 95px rgba(136, 136, 136, 0.1);
+  border: 1px solid rgba(217, 217, 217, 0.5);
+  border-radius: 50px;
+  padding: 57px 32px;
+  height: 100%;
+}
+@media only screen and (max-width: 991px) {
+  .advantage-card {
+    margin-bottom: 20px;
+    height: calc(100% - 20px);
+  }
+}
+.advantage-card-body {
+  padding: 0;
+}
+.advantage-card-image {
+  display: block;
+  text-align: center;
+  padding: 0 0 15px;
+  min-height: 125px;
+}
+.advantage-card-image img {
+  max-width: 110px;
+  height: auto;
+}
+.advantage-card-title {
+  color: #0f60da;
+  font-size: 28px;
+  line-height: 32px;
+  text-align: center;
+  min-height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 15px;
+}
+
+.advantage-card-description {
+  text-align: center;
+}
+.advantage-card-description p {
+  margin: 0;
+}
+.advantage-button {
+  color: #ffffff !important;
+  background-color: #0f60da !important;
+  padding: 15px 35px;
+  border-radius: 75px;
+  font-size: 29px;
+  line-height: 38px;
+}
+
+footer {
+  background-color: #032b68;
+  color: #eee;
+  position: relative;
+}
+footer:after {
+  content: "";
+  background: url("../../images/groupe-right.svg") no-repeat;
+  top: 50px;
+  right: -50px;
+  z-index: 0;
+  position: absolute;
+  width: 200px;
+  height: 220px;
+}
+footer p {
+  font-size: 24px;
+  line-height: 38px;
+  color: #fff;
+}
+.footer-text {
+  text-align: center;
+  padding: 100px 50px 80px;
+}
+
+.copyright {
+  text-align: right;
+  padding: 15px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.8);
+}
+.copyright a {
+  font-size: 16px;
+  text-align: right;
+  margin: 0;
+  text-decoration: none;
+  color: #fff;
+}
+@media only screen and (max-width: 991px) {
+  .footer-text {
+    position: relative;
+    z-index: 99;
+    padding: 100px 15px 80px;
+  }
+  footer p {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .copyright p {
+    font-size: 15px;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  footer:after {
+    right: -120px;
+    background-size: 100%;
+  }
+
+  .advantage-button {
+    padding: 15px 25px;
+    font-size: 25px;
+    line-height: 35px;
+  }
+}
+
+.invalid-feedback {
+  display: block !important;
+}
