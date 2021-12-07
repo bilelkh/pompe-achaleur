@@ -48,10 +48,12 @@ function Home() {
       return false;
     } else {
       setStep(step + 1);
-      axios.post("http://localhost:1337", state).then((response) => {
-        console.log(response);
-        setState("");
-      });
+      axios
+        .post("https://secure-island-45643.herokuapp.com/api", state)
+        .then((response) => {
+          console.log(response);
+          setState("");
+        });
     }
   };
 
